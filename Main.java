@@ -6,7 +6,8 @@ public class Main
      public static void main(String[] args)
      {
         Store s = new Store();
-        Book b = new Book();
-        System.out.println(b instanceof ItemForSale);
+        Author a = new Author("Nikhil Abraham", "NA");
+        Book b = new Book("Coding For Dummies", 36.99, "06/13/2016", a, "Wiley");
+        System.out.println(b instanceof Item);
      }
 }

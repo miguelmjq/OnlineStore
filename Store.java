@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*Implement the following functionality into the store:
 
   instance variables: 
@@ -20,8 +23,45 @@
       publisher of books
 
     Where these variables are stored and how to name them is up to you!
-*/
-public class Store
-{
+ */
+public class Store {
 
+    private double profit;
+    private ArrayList<Item> items;
+
+    public Store() {
+        this.profit = 0.0;
+        this.items = new ArrayList<Item>();
+    }
+
+    public void addItem(Item item) {
+        items.add(item);
+    }
+
+    public void sellItem(String itemName) {
+        for (int i = 0; i < items.size(); i++) {
+            Item item = items.get(i);
+            if (item.getName().equals(itemName)) {
+                profit += item.getPrice();
+                items.remove(i);
+                System.out.println("Sold " + itemName + " for $" + item.getPrice());
+                return;
+            }
+        }
+        System.out.println("Item not found: " + itemName);
+    }
+
+    public void maker(String itemName) {
+        for (Item item : items) {
+            if (item.getName().equals(itemName)) {
+                System.out.println("Creator of " + itemName + ": " + item.getMaker());
+                return;
+            }
+        }
+        System.out.println("Item not found: " + itemName);
+    }
+
+    public void showItems(){
+      System.out.println("Available items:");
+    }
 }
