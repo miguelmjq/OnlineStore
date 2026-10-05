@@ -27,11 +27,11 @@ import java.util.ArrayList;
 public class Store {
 
     private double profit;
-    private ArrayList<Item> items;
+    private final ArrayList<Item> items;
 
     public Store() {
         this.profit = 0.0;
-        this.items = new ArrayList<Item>();
+        this.items = new ArrayList<>();
     }
 
     public void addItem(Item item) {
@@ -61,7 +61,14 @@ public class Store {
         System.out.println("Item not found: " + itemName);
     }
 
+    public double getProfit() {
+        return profit;
+    }
+
     public void showItems(){
       System.out.println("Available items:");
+      for (Item item : items){
+        System.out.println(item.getName());
+      }
     }
 }
