@@ -18,7 +18,8 @@ public class Book extends Item {
         return publisher;
     }
 
-    public String getCreator() {
+    @Override 
+    public String getMaker() {
         return author.getName();
     }
 

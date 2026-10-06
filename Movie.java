@@ -9,11 +9,20 @@ public class Movie extends Item
         this.duration = duration;
     }
 
+    @Override 
     public String getMaker() {
         return maker;
     }
     
     public int getDuration() {
         return duration;
+    }
+
+    public void setMaker(String maker){
+      this.maker=maker;
+    }
+    
+    public void setDuration(int duration){
+        this.duration = duration;
     }
 }

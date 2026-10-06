@@ -68,7 +68,7 @@ public class Store {
     public void showItems(){
       System.out.println("Available items:");
       for (Item item : items){
-        System.out.println(item.getName());
+        System.out.println("name: "+ item.getName() + ", price: $" + item.getPrice() + ", author: " + item.getMaker());
       }
     }
 }

@@ -22,10 +22,19 @@ public class Item
         return saleDate;
     }
 
-
     public String getMaker(){
         return "not stated";
     }
 
-    
+    public void setPrice(double price){
+        this.price = price;
+    }
+
+    public void setSaleDate(String saleDate){
+        this.saleDate = saleDate;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
 }

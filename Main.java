@@ -9,5 +9,14 @@ public class Main
         Author a = new Author("Nikhil Abraham", "NA");
         Book b = new Book("Coding For Dummies", 36.99, "06/13/2016", a, "Wiley");
         System.out.println(b instanceof Item);
-     }
+        s.addItem(b);
+        s.addItem(b);
+        s.addItem(b);
+        s.addItem(b);
+        s.showItems();
+        s.sellItem(b.getName());
+        s.sellItem(b.getName());
+        System.out.println(s.getProfit());
+        s.showItems();
+        }
 }
