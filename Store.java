@@ -1,3 +1,6 @@
+//Miguel M Querales
+//10/7/26
+// this class has all the setters and methods that only the store does
 
 import java.util.ArrayList;
 
@@ -29,15 +32,21 @@ public class Store {
     private double profit;
     private final ArrayList<Item> items;
 
+    //constructor
     public Store() {
         this.profit = 0.0;
         this.items = new ArrayList<>();
     }
 
+    //precon: a valid item
+    //postcon: adds the item to the item list and removes its price from the profit
     public void addItem(Item item) {
         items.add(item);
+        profit -= item.getPrice();
     }
 
+    //precon: a valid item name
+    //postcon: sells the item and adds its price to the store profit
     public void sellItem(String itemName) {
         for (int i = 0; i < items.size(); i++) {
             Item item = items.get(i);
@@ -51,6 +60,8 @@ public class Store {
         System.out.println("Item not found: " + itemName);
     }
 
+    //precon: a valid string 
+    //postcon: prints the maker of the item given
     public void maker(String itemName) {
         for (Item item : items) {
             if (item.getName().equals(itemName)) {
@@ -61,10 +72,14 @@ public class Store {
         System.out.println("Item not found: " + itemName);
     }
 
+    //precon: none
+    //postcon: returns profit
     public double getProfit() {
         return profit;
     }
 
+    //precon: none
+    //postcon: prints a list of all the items currently available
     public void showItems(){
       System.out.println("Available items:");
       for (Item item : items){

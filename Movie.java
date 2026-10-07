@@ -1,3 +1,7 @@
+//Miguel M Querales
+//10/7/26
+// This class constructs the movie item, and provides setters and getters for it
+
 public class Movie extends Item
 {
     private String maker;

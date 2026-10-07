@@ -1,3 +1,8 @@
+//Miguel M Querales
+//10/7/26
+// this class is a parent to movie and book, contains some setters and getters
+// the other classes lack 
+
 public class Item
 {
     private String name;

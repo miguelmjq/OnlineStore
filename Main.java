@@ -1,3 +1,6 @@
+//Miguel M Querales
+//10/7/26
+// this class runs the tests
 
 public class Main {
     //Your tests go here! I expect you to make sure various parts of your program work. 

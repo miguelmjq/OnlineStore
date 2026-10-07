@@ -1,3 +1,6 @@
+//Miguel M Querales
+//10/7/26
+// this class constructs the book item and has setters and getters 
 
 public class Book extends Item {
 

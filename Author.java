@@ -1,3 +1,7 @@
+//Miguel M Querales
+//10/7/26
+// this class hosts the author for the book item
+
 public class Author
 {
     private String name;
