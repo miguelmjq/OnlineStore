@@ -26,4 +26,13 @@ public class Book extends Item {
     public String getAuthDOB(){
         return author.getDOB();
     }
+
+    public void setAuthor(Author auth){
+        this.author = auth;
+    }
+
+    public void setPublisher(String publisher){
+        this.publisher = publisher;
+    }
 }
+

@@ -15,4 +15,12 @@ public class Author
     public String getDOB(){
         return dob;
     }
+
+    public void setName(String Name){
+      this.name=Name;
+    }
+
+    public void setDOB(String dob){
+        this.dob = dob;
+    }
 }
